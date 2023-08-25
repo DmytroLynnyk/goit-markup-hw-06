@@ -641,12 +641,10 @@ header {
 @media screen and (min-width: 768px) {
   .team-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 64px;
-  }
-  .team-item {
-    flex-basis: calc((100% - 24px) / 2);
   }
 }
 
