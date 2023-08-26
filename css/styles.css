@@ -337,8 +337,7 @@ header {
   gap: 16px;
 }
 
-.footer-link:hover,
-.footer-link:focus {
+.footer-link:active {
   background-color: var(--green);
 }
 
@@ -1031,21 +1030,30 @@ header {
   transition: background-color var(--animation), border var(--animation);
 }
 
-.modal-button:hover,
-.modal-button:focus {
+.modal-button:active {
   border: none;
   background-color: var(--ocean);
 }
+
+/* .modal-button:hover,
+.modal-button:focus {
+  border: none;
+  background-color: var(--ocean);
+} */
 
 .modal-btn-icon {
   fill: var(--navyblue);
   transition: fill var(var(--animation));
 }
 
-.modal-button:hover .modal-btn-icon,
-.modal-button:focus .modal-btn-icon {
+.modal-button:active .modal-btn-icon {
   fill: var(--white);
 }
+
+/* .modal-button:hover .modal-btn-icon,
+.modal-button:focus .modal-btn-icon {
+  fill: var(--white);
+} */
 
 /* Mobile menu */
 .menu-toggle {
@@ -1066,23 +1074,18 @@ header {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.mobile-menu-close {
-  fill: var(--navyblue);
-  transition: fill var(--animation);
-}
-
-.menu-toggle:hover .mobile-menu-close,
-.menu-toggle:focus .mobile-menu-close {
-  fill: var(--cornflower);
-}
-
 .menu-container {
   position: fixed;
   top: 0;
   left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding: 80px 40px 40px 40px;
   background-color: var(--white);
   z-index: 999;
 
@@ -1102,15 +1105,43 @@ header {
 }
 
 .mobile-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
-.mobile-menu .link {
-  color: var(--navyblue);
+.mobile-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+  transition: color var(--animation);
+}
 
-  display: block;
-  padding: 10px;
-  text-decoration: none;
+.mobile-menu-link {
+  color: var(--navyblue);
+}
+
+.mobile-menu-link:active {
+  color: var(--ocean);
+}
+
+@media (hover: hover) {
+  .mobile-menu-link:hover,
+  .mobile-menu-link:focus {
+    color: var(--ocean);
+  }
+  .modal-button:hover,
+  .modal-button:focus {
+    border: none;
+    background-color: var(--ocean);
+  }
+  .modal-button:hover .modal-btn-icon,
+  .modal-button:focus .modal-btn-icon {
+    fill: var(--white);
+  }
+
+  .footer-link:hover,
+  .footer-link:focus {
+    background-color: var(--green);
+  }
+}
+
+.mobile-menu-social {
+  display: flex;
+  justify-content: space-between;
 }
