@@ -284,7 +284,7 @@ header {
 }
 
 /* Header Mobile */
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 767.98px) {
   .nav-list {
     display: none;
   }
@@ -293,6 +293,25 @@ header {
   }
   .header .logo {
     margin: 0;
+  }
+}
+
+/* Header Tablet */
+@media screen and (max-width: 1157.98px) {
+  .contacts {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+  }
+  .contacts-list {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+  }
+  .contacts {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
   }
 }
 
@@ -1035,12 +1054,6 @@ header {
   background-color: var(--ocean);
 }
 
-/* .modal-button:hover,
-.modal-button:focus {
-  border: none;
-  background-color: var(--ocean);
-} */
-
 .modal-btn-icon {
   fill: var(--navyblue);
   transition: fill var(var(--animation));
@@ -1050,17 +1063,13 @@ header {
   fill: var(--white);
 }
 
-/* .modal-button:hover .modal-btn-icon,
-.modal-button:focus .modal-btn-icon {
-  fill: var(--white);
-} */
-
 /* Mobile menu */
 .menu-toggle {
   display: flex;
   align-items: center;
   padding: 0;
   background-color: transparent;
+  transition: background-color var(--animation);
 }
 
 @media (min-width: 768px) {
@@ -1069,8 +1078,7 @@ header {
   }
 }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
+.menu-toggle:active {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -1085,7 +1093,7 @@ header {
 
   width: 100vw;
   height: 100vh;
-  padding: 80px 40px 40px 40px;
+  padding: 80px 0 40px 40px;
   background-color: var(--white);
   z-index: 999;
 
@@ -1121,6 +1129,10 @@ header {
 }
 
 @media (hover: hover) {
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
   .mobile-menu-link:hover,
   .mobile-menu-link:focus {
     color: var(--ocean);
@@ -1139,9 +1151,36 @@ header {
   .footer-link:focus {
     background-color: var(--green);
   }
+
+  .menu-contacts-email:hover,
+  .menu-contacts-email:focus {
+    color: var(--ocean);
+  }
+}
+
+.menu-contacts {
+  font-style: normal;
+  margin-bottom: 48px;
+}
+
+.menu-contacts-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.menu-contacts-phone {
+  color: var(--ocean);
+}
+
+.menu-contacts-email {
+  color: inherit;
+}
+
+.menu-contacts-email:active {
+  color: var(--ocean);
 }
 
 .mobile-menu-social {
   display: flex;
   justify-content: space-between;
+  padding-right: 60px;
 }
