@@ -318,17 +318,31 @@ header {
 /* Footer */
 
 .footer {
-  padding: 100px 0;
+  padding: 96px 0;
+
   background-color: var(--navyblue);
+}
+@media screen and (min-width: 768px) {
+  .footer {
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
 }
 
 .footer .container {
-  display: flex;
-  align-items: baseline;
+}
+@media screen and (min-width: 1158px) {
+  .footer .container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer .logo {
-  margin: 0 0 16px 0;
+  margin-bottom: 16px;
 }
 
 .logo-studio-w {
@@ -336,24 +350,52 @@ header {
 }
 
 .footer-box {
-  margin: 0 120px 0 0;
+  margin-bottom: 72px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+@media screen and (max-width: 767.98px) {
+  .footer-box {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-box {
+    margin: 0 120px 0 0;
+    display: inline;
+  }
 }
 
 .footer-desc {
   color: var(--cloud);
   width: 264px;
 }
+@media screen and (max-width: 767.98px) {
+  .footer-desc {
+    width: 268px;
+  }
+}
 
 .footer-social {
   color: var(--white);
-  margin: 0 80px 0 0;
+  margin: 0 0 72px 0;
+}
+@media screen and (min-width: 1158px) {
+  .footer-social {
+    margin: 0 80px 0 0;
+  }
 }
 
 .footer-links {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 16px;
+}
+@media screen and (max-width: 767.98px) {
+  .footer-links {
+    justify-content: center;
+  }
 }
 
 .footer-link:active {
@@ -362,6 +404,12 @@ header {
 
 .footer-social .body-medium {
   margin: 0 0 16px 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-social .body-medium {
+    text-align: left;
+  }
 }
 
 .footer-icon {
@@ -382,14 +430,26 @@ header {
 .subscribe-title {
   color: var(--white);
   margin: 0 0 16px 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .subscribe-title {
+    text-align: left;
+  }
 }
 
 .subscribe-form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 24px;
-  height: 40px;
+  gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+    height: 40px;
+  }
 }
 
 .subscribe-box {
