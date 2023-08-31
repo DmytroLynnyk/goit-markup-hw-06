@@ -523,11 +523,6 @@ header {
 /* Studio */
 .hero {
   background-color: var(--navyblue);
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/bg-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--white);
@@ -536,12 +531,67 @@ header {
   margin: 0 auto;
   background-position: center;
   max-width: 1440px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/bg-image_mob@1x.jpg);
 }
+@media only screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-image_mob@2x.jpg);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-image_tab@1x.jpg);
+  }
+}
+/* @media only screen and (min-width: 768px),
+  (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-image_tab@2x.jpg);
+  }
+} */
+
 @media only screen and (min-width: 1158px) {
   .hero {
     padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-image_desk@1x.jpg);
   }
 }
+/* @media only screen and (min-width: 1158px) and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-image_desk@2x.jpg);
+  }
+} */
 
 .hero-title {
   max-width: 320px;
@@ -983,13 +1033,17 @@ header {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 408px;
-  /* min-height: 584px; */
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   border-radius: 4px;
   background-color: var(--dairy, #fcfcfc);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform var(--animation);
+}
+@media only screen and (min-width: 768px) {
+  .modal-window {
+    padding: 72px 24px 24px 24px;
+  }
 }
 
 .order-form {
